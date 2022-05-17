@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  pulsar:
+    image: apachepulsar/pulsar:2.10.0
+    ports:
+      - "6650:6650"
+      - "6651:8080"
+      - "6652:8000"
+    environment:
+      PULSAR_MEM: " -Xms512m -Xmx512m -XX:MaxDirectMemorySize=1g"
+      BOOKIE_MEM: " -Xms1024m -Xmx1024m -XX:MaxDirectMemorySize=2g"
+    command: /pulsar/bin/pulsar standalone -nss
