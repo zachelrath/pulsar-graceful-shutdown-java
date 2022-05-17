@@ -40,6 +40,7 @@ public class PulsarConsumerConfiguration {
         consumers = new ArrayList<>();
         Consumer<byte[]> consumer = client.newConsumer()
                 .subscriptionName(subscriptionName)
+                .subscriptionType(SubscriptionType.Key_Shared)
                 .topic(topicName)
                 .receiverQueueSize(5)
                 .messageListener(messageListener)

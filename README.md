@@ -1,6 +1,6 @@
 # Graceful shutdown with Apache Pulsar Java client in Spring Boot
 
-### Run standalone local Pulsar cluster with Docker Compose
+### Run Pulsar (in standalone cluster, via Docker Compose)
 
 ```shell
 docker compose up -d
@@ -12,8 +12,16 @@ docker compose up -d
 ./mvnw clean install
 ```
 
-### Run Producer and Consumer
+### Run producer and consumner
+
+#### Producer
 
 ```shell
-./mvnw 
+SPRING_PROFILES_ACTIVE=producer ./mvnw spring-boot:run
+```
+
+#### Consumer
+
+```shell
+SPRING_PROFILES_ACTIVE=consumer ./mvnw spring-boot:run
 ```

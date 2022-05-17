@@ -51,7 +51,7 @@ public class MessageProducer {
                 .property("data", message)
                 .key(key)
                 .send();
-        log.info("(PRODUCER) Sent [{}]: {}", key, msgId);
+        log.info("(PRODUCER) Sent [{}]", msgId);
     }
 
     @EventListener(ApplicationReadyEvent.class)
