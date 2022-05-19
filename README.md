@@ -12,7 +12,7 @@ docker compose up -d
 ./mvnw clean install
 ```
 
-### Run producer and consumner
+### Run producer and consumer (via command-line)
 
 #### Producer
 
